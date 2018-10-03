@@ -32,9 +32,9 @@
 					<ul class="hide">
 
 						<!-- SLIDE  -->
-						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="assets/images/commercial_page1.jpg">
+						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="<%=asset_url("commercial_page1.jpg")%>">
 
-                            <%= image_tag("commercial_page1.jpg", alt: "elevators", data: {lazyload: asset_url("commercial_page1.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+                            <%= image_tag("1x1.png", alt: "elevators", data: {lazyload: asset_url("commercial_page1.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
                             
 							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
 								data-x="center"
@@ -90,10 +90,10 @@
 						</li>
 
 						<!-- SLIDE  -->
-						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="assets/images/commercial_page2.jpeg">
+						<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="<%=asset_url("commercial_page2.jpeg")%>">
 
-							<img src="assets/images/1x1.png" data-lazyload="assets/images/commercial_page2.jpeg" alt="elevators" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
-
+							<%= image_tag("1x1.png", alt: "elevators", data: {lazyload: asset_url("commercial_page2.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
+							
 							<div class="tp-caption very_large_text lfb ltt tp-resizeme"
 								data-x="center"
 								data-y="center" data-voffset="-100"
@@ -159,11 +159,10 @@
 						</li>
 
 						<!-- SLIDE -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 3" data-thumb="assets/images/commercial_page3.jpeg">
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 3" data-thumb="<%=asset_url("commercial_page3.jpeg")%>">
 
-							<img src="assets/images/1x1.png" data-lazyload="assets/images/commercial_page3.jpeg" alt="Workers doing a maintenance" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" >
-                            
-                            <div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
+                            <%= image_tag("1x1.png", alt: "elevators", data: {lazyload: asset_url("commercial_page3.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
+							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
 							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
 
 							<div class="tp-caption customin ltl tp-resizeme large_bold_white"

@@ -1,3 +1,4 @@
+//= require jquery
 //= require jquery-3.3.1.min
 //= require scripts
 //= require main

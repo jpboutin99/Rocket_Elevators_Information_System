@@ -5,8 +5,9 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# Use mysql2 as the database for Active Record
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -18,6 +19,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'rails_admin', '~> 1.3'
 
+gem 'jquery-rails'
+
+# Use devise for Authentication
+gem 'devise', '~> 4.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

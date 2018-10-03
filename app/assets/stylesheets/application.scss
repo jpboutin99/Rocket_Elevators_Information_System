@@ -6,3 +6,8 @@
 @import 'color_scheme/green';
 @import 'extralayers';
 @import 'settings';
+
+.container {
+    width: 100%;
+    max-width: 100%;
+}
