@@ -32,10 +32,10 @@
             <ul class="hide">
 
                 <!-- SLIDE  -->
-                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="assets/images/residential_page1.jpg">
+                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="residential_page1.jpg">
 
-                    <%= image_tag("residential_page1.jpg", :alt => "home elevator") %>
-                    
+                    <%= image_tag("residential_page1.jpg", alt: "home elevator", data: {lazyload: asset_url("residential_page1.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+
                     
                     <div class="tp-caption customin ltl tp-resizeme large_bold_white"
                         data-x="center"
