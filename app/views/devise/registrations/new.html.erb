@@ -1,13 +1,28 @@
-<h2>Sign up</h2>
+<h2>Employee Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "First Name" %>
+  </div>
+<br />
+  <div class="field">
+    <%= f.label :nast_name %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Last Name" %>
+  </div>
+<br />
+<div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true, autocomplete: "Title" %>
+  </div>
+<br />    
+  <div class="field">
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+<br />
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -15,12 +30,12 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
-
+<br />
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
+<br />
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
