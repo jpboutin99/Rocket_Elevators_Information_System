@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     document.getElementById("numElev_2").readOnly = true;
     document.getElementById("numElev_3").readOnly = true;
     document.getElementById("elevPriceUnit").readOnly = true;
@@ -174,6 +173,93 @@ $(document).ready(function () {
         document.getElementById('total_').value = parseFloat(total).toFixed(2) + " $";
     };
 
+    function CalcRes(numApp, numFloors, prodRange) {
+        //Calculate number of elevators required
+        numElev = Math.ceil((numApp / numFloors) / 6);
+
+        //Multiplying for every 20 additional floors and setting final number of elevators required
+        finNumElev = numElev * Math.ceil(numFloors / 20);
+
+        //Apply formula depending on Product Range and getting total before install fees
+        roughTotal = prodRange * finNumElev;
+
+        //Calculate Installation Fees and get final total
+        if (prodRange == 7565) {
+            installFee = roughTotal * 0.1;
+            total = roughTotal + installFee;
+        } else if (prodRange == 12345) {
+            installFee = roughTotal * 0.13;
+            total = roughTotal + installFee;
+        } else {
+            installFee = roughTotal * 0.16;
+            total = roughTotal + installFee;
+        };
+        setResult(finNumElev, roughTotal, installFee, total);
+    };
+
+    function CalcCom(numElev, prodRange) {
+
+        finNumElev = numElev;
+
+        //Apply formula depending on Product Range and getting total before install fees
+        roughTotal = prodRange * finNumElev;
+
+        //Calculate Installation Fees and get final total
+        if (prodRange == 7565) {
+            installFee = roughTotal * 0.1;
+            total = roughTotal + installFee;
+        } else if (prodRange == 12345) {
+            installFee = roughTotal * 0.13;
+            total = roughTotal + installFee;
+        } else {
+            installFee = roughTotal * 0.16;
+            total = roughTotal + installFee;
+        };
+
+        setResult(finNumElev, roughTotal, installFee, total);
+    };
+
+    function CalcCorpHyb(numFloors, numBase, maxOcc, prodRange) {
+
+        // Add number of floors and basements
+        totalNumFloors = numFloors + numBase;
+
+        //Get total occupancy
+        totalMaxOcc = maxOcc * totalNumFloors;
+
+        //Get required elevators
+        numElev = totalMaxOcc / 1000;
+
+        //Get required elevator tower
+        numTower = Math.ceil(totalNumFloors / 20);
+
+        //Get average number of elevators per tower and rounding it up
+        numAverElev = Math.ceil(numElev / numTower);
+
+        //Multiypling rounded up number of elevators by number of tower
+        finNumElev = numAverElev * numTower;
+        console.log("server.js finNumElev lg102: " + finNumElev);
+
+        //Apply formula depending on Product Range and getting total before install fees
+        roughTotal = prodRange * finNumElev;
+
+        console.log("server.js lg94: " + prodRange);
+
+        //Calculate Installation Fees and get final total
+        if (prodRange == 7565) {
+            installFee = roughTotal * 0.1;
+            total = roughTotal + installFee;
+        } else if (prodRange == 12345) {
+            installFee = roughTotal * 0.13;
+            total = roughTotal + installFee;
+        } else {
+            installFee = roughTotal * 0.16;
+            total = roughTotal + installFee;
+        };
+
+        setResult(finNumElev, roughTotal, installFee, total);
+
+    };
 
     function doCalc() {
 
@@ -245,22 +331,7 @@ $(document).ready(function () {
                 };
 
                 if ($('#numApp').val() && $('#numFloors').val() && ($('#standard').is(':checked') || $('#premium').is(':checked') || $('#excelium').is(':checked'))) {
-                    formData = {
-                        numberApp: numApp,
-                        numberFloors: numFloors,
-                        productRange: prodRange
-                    }
-                    //-----------------------------------------------------------------------------------------------------------------------
-                    // console.log("dans main-quote.js __ juste avant de faire mon post lg 252")
-                    // $.post('http://127.0.0.1:3000/api/res/', formData, function (result) {
-                    $.post('//api.danyboucher-artiste.com/api/res', formData, function (result) {
-                        console.log("main-quote.js lg254: " + result);
-                        setResult(result.finalNumElev, result.subTotal, result.installationFee, result.grandTotal);
-                    });
-                    // $.post(URL,data,callback);
-                    // The required URL parameter specifies the URL you wish to request.
-                    // The optional data parameter specifies some data to send along with the request.
-                    // The optional callback parameter is the name of a function to be executed if the request succeeds.
+                    CalcRes(numApp, numFloors, prodRange);
 
                 } else {
                     $('#elevTotal').val('');
@@ -291,16 +362,8 @@ $(document).ready(function () {
                     numElev = getInfoNumElev();
                     prodRange = getProdRange();
 
-                    formData = {
-                        numberElev: numElev,
-                        productRange: prodRange
-                    }
-                    //-----------------------------------------------------------------------------------------------------------------------
+                    CalcCom(numElev, prodRange);
 
-                    // $.post('http://127.0.0.1:3000/api/com/', formData, function (result) {
-                    $.post('//api.danyboucher-artiste.com/api/com/', formData, function (result) {
-                        setResult(result.finalNumElev, result.subTotal, result.installationFee, result.grandTotal);
-                    });
                 } else {
                     $('#elevTotal').val('');
                     $('#installation').val('');
@@ -352,37 +415,62 @@ $(document).ready(function () {
                     maxOcc = getInfoMaxOcc();
                     prodRange = getProdRange();
 
-                    //Apply formula depending on Product Range and getting total before install fees
-                    roughTotal = prodRange * finNumElev;
+                    CalcCorpHyb(numFloors, numBase, maxOcc, prodRange);
 
-                    // console.log("server.js lg94: " + prodRange);
+                } else {
+                    $('#elevTotal').val('');
+                    $('#installation').val('');
+                    $('#total_').val('');
+                };
+            };
 
-                    //Calculate Installation Fees and get final total
-                    if (prodRange == 7565) {
-                        installFee = roughTotal * 0.1;
-                        total = roughTotal + installFee;
-                    } else if (prodRange == 12345) {
-                        installFee = roughTotal * 0.13;
-                        total = roughTotal + installFee;
-                    } else {
-                        installFee = roughTotal * 0.16;
-                        total = roughTotal + installFee;
-                    };
+            if ($('#hybrid').hasClass('active')) {
 
+                if ($('#numFloors').val() && $('#numBase').val() && $('#maxOcc').val()) {
+                    // GetInfos();
 
+                    // numApp = getInfoNumApp();
+                    numFloors = getInfoNumFloors();
+                    numBase = getInfoNumBase();
+                    maxOcc = getInfoMaxOcc();
+                    prodRange = getProdRange();
 
-                    formData = {
-                        numberFloors: numFloors,
-                        numberBase: numBase,
-                        maximumOcc: maxOcc,
-                        productRange: prodRange
-                    }
-                    //-----------------------------------------------------------------------------------------------------------------------
+                    // Add number of floors and basements
+                    totalNumFloors = numFloors + numBase;
 
-                    // $.post('http://127.0.0.1:3000/api/corpHyb/', formData, function (result) {
-                    $.post('//api.danyboucher-artiste.com/api/corpHyb/', formData, function (result) {
-                        setResult(finNumElev, roughTotal, installFee, total);
-                    });
+                    //Get total occupancy
+                    totalMaxOcc = maxOcc * totalNumFloors;
+
+                    //Get required elevators
+                    numElev = Math.ceil(totalMaxOcc / 1000);
+
+                    //Get required elevator tower
+                    numTower = Math.ceil(totalNumFloors / 20);
+
+                    //Get average number of elevators per tower and rounding it up
+                    numAverElev = Math.ceil(numElev / numTower);
+
+                    //Multiypling rounded up number of elevators by number of tower
+                    finNumElev = numAverElev * numTower;
+
+                    // set numElev_2 et numElev_3
+                    setFirstResult(finNumElev);
+                } else {
+                    $('#numElev_2').val('');
+                    $('#numElev_3').val('');
+                    $('#elevTotal').val('');
+                    $('#installation').val('');
+                    $('#total_').val('');
+                };
+
+                if ($('#numFloors').val() && $('#numBase').val() && $('#maxOcc').val() && ($('#standard').is(':checked') || $('#premium').is(':checked') || $('#excelium').is(':checked'))) {
+
+                    numFloors = getInfoNumFloors();
+                    numBase = getInfoNumBase();
+                    maxOcc = getInfoMaxOcc();
+                    prodRange = getProdRange();
+
+                    CalcCorpHyb(numFloors, numBase, maxOcc, prodRange);
 
                 } else {
                     $('#elevTotal').val('');
@@ -391,86 +479,6 @@ $(document).ready(function () {
                 };
             };
         };
-
-        if ($('#hybrid').hasClass('active')) {
-
-            if ($('#numFloors').val() && $('#numBase').val() && $('#maxOcc').val()) {
-                // GetInfos();
-
-                // numApp = getInfoNumApp();
-                numFloors = getInfoNumFloors();
-                numBase = getInfoNumBase();
-                maxOcc = getInfoMaxOcc();
-                prodRange = getProdRange();
-
-                // Add number of floors and basements
-                totalNumFloors = numFloors + numBase;
-
-                //Get total occupancy
-                totalMaxOcc = maxOcc * totalNumFloors;
-
-                //Get required elevators
-                numElev = Math.ceil(totalMaxOcc / 1000);
-
-                //Get required elevator tower
-                numTower = Math.ceil(totalNumFloors / 20);
-
-                //Get average number of elevators per tower and rounding it up
-                numAverElev = Math.ceil(numElev / numTower);
-
-                //Multiypling rounded up number of elevators by number of tower
-                finNumElev = numAverElev * numTower;
-
-                // set numElev_2 et numElev_3
-                setFirstResult(finNumElev);
-            } else {
-                $('#numElev_2').val('');
-                $('#numElev_3').val('');
-                $('#elevTotal').val('');
-                $('#installation').val('');
-                $('#total_').val('');
-            };
-
-            if ($('#numFloors').val() && $('#numBase').val() && $('#maxOcc').val() && ($('#standard').is(':checked') || $('#premium').is(':checked') || $('#excelium').is(':checked'))) {
-
-                numFloors = getInfoNumFloors();
-                numBase = getInfoNumBase();
-                maxOcc = getInfoMaxOcc();
-                prodRange = getProdRange();
-
-                //Apply formula depending on Product Range and getting total before install fees
-                roughTotal = prodRange * finNumElev;
-
-                // console.log("server.js lg94: " + prodRange);
-
-                //Calculate Installation Fees and get final total
-                if (prodRange == 7565) {
-                    installFee = roughTotal * 0.1;
-                    total = roughTotal + installFee;
-                } else if (prodRange == 12345) {
-                    installFee = roughTotal * 0.13;
-                    total = roughTotal + installFee;
-                } else {
-                    installFee = roughTotal * 0.16;
-                    total = roughTotal + installFee;
-                };
-
-                formData = {
-                    numberFloors: numFloors,
-                    numberBase: numBase,
-                    maximumOcc: maxOcc,
-                    productRange: prodRange
-                }
-                // $.post('http://127.0.0.1:3000/api/corpHyb/', formData, function (result) {
-                $.post('//api.danyboucher-artiste.com/api/corpHyb/', formData, function (result) {
-                    setResult(finNumElev, roughTotal, installFee, total);
-                });
-            } else {
-                $('#elevTotal').val('');
-                $('#installation').val('');
-                $('#total_').val('');
-            };
-        };
-
     };
+
 });
