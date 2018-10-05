@@ -1,11 +1,12 @@
 @import 'bootstrap.min';
+@import 'extralayers';
+@import 'settings';
 @import 'essentials';
 @import 'layout';
 @import 'media';
 @import 'header-1';
 @import 'color_scheme/darkblue';
-@import 'extralayers';
-@import 'settings';
+
 
 .container {
     width: 100%;

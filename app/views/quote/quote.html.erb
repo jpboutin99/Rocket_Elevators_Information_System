@@ -1,6 +1,8 @@
 
-        
-        
+
+		
+		
+
         <!-- PORTFOLIO -->
 		<section id="work" style="padding-top: 50px" >
 			<div class="container" style="width: auto" >
@@ -35,7 +37,7 @@
 
 								<div class="card-block">
 
-									<form action="/new_quote" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!"
+									<form id="my_form"  action="/new_quote" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!"
 									 data-toastr-position="top-right">
 										<fieldset>
 
@@ -96,10 +98,10 @@
 													<div class="fancy-form fancy-form-select">
 														<select class="form-control select2">
 															<option value="">--- Select ---</option>
-															<option name="quote[bus_hours]" value="1">1 hour</option>
-															<option name="quote[bus_hours]" value="2">2 hours</option>
-															<option name="quote[bus_hours]" value="3">3 hours</option>
-															<option name="quote[bus_hours]" value="4">4 hours</option>
+															<option value="1">1 hour</option>
+															<option value="2">2 hours</option>
+															<option value="3">3 hours</option>
+															<option value="4">4 hours</option>
 															<option value="5">5 hours</option>
 															<option value="6">6 hours</option>
 															<option value="7">7 hours</option>
@@ -197,7 +199,7 @@
 											</div>
 
 										</fieldset>
-										<button class="btn btn-submit btn-lg" type="submit">SUBMIT QUOTE &nbsp; <i class="fa fa-angle-right"></i></button>
+									<button id="submitbutton" class="btn btn-submit btn-lg" type="submit">SUBMIT QUOTE &nbsp; <i class="fa fa-angle-right"></i></button>
                                     </form>
                                     
 								</div>
@@ -207,3 +209,21 @@
                 </div>
 			</section>
 			<!-- / -->
+
+			<script>
+				$("#my_form").submit(function(event){
+					event.preventDefault(); //prevent default action 
+					var post_url = $(this).attr("action"); //get form action url
+					var request_method = $(this).attr("method"); //get form GET/POST method
+					var form_data = $(this).serialize(); //Encode form elements for submission
+					
+					$.ajax({
+						url : post_url,
+						type: request_method,
+						data : form_data
+					}).done(function(response){ //
+						alert('YOUR SUBMISSION HAVE BEEN RECEIVED');
+						window.location="/";
+					});
+				});
+			</script>
