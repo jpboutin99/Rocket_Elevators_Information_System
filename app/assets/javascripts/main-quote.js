@@ -100,6 +100,10 @@ $(document).ready(function () {
         console.log(document.getElementById('type').value);
     });
 
+    $('#submitbutton').on('click', function () {
+        initialize();
+    });
+
     function initialize() {
         $('#numElev_2').val('');
         $('#numElev_3').val('');
