@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_015936) do
+ActiveRecord::Schema.define(version: 2018_10_05_141728) do
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "nb_floors"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "quote_type"
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "nb_floors"
     t.integer "nb_apt"
     t.integer "nb_base"
     t.integer "nb_cies"
@@ -34,7 +35,6 @@ ActiveRecord::Schema.define(version: 2018_10_05_015936) do
     t.float "elev_total"
     t.float "cost_install"
     t.float "total"
-    t.string "quotetype"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

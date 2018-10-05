@@ -9,6 +9,24 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+ActionMailer::Base.smtp_settings = {
+  :address                => "smtp.gmail.com",
+  :port                   => 587,
+  :domain                 => "gmail.com",
+  :authentication         => "plain",
+  :enable_starttls_auto   => true,
+  :user_name              => "rocketelevators@gmail.com",
+  :password               => "rocket2018"
+  :ssl                    => true
+  :tsl                    => true     
+}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -79,14 +97,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = {:host => 'rocketelevators.com'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  :address => "127.0.0.1",
-  :port    => 25,
-  :domain  => 'rocketelevators.com'
-}
-
+ 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
