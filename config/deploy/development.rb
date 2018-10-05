@@ -8,7 +8,7 @@ server "34.203.94.126", user: "ubuntu", roles: %w{app db web}
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 set :rails_env, "development"
-set :bundle_without, 'production'
+set :bundle_without, "production"
 set :deploy_to, "/home/ubuntu/apps/jp"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :linked_files, %w{config/secrets.yml config/database.yml}
@@ -20,6 +20,7 @@ set :linked_files, %w{config/secrets.yml config/database.yml}
 # group is considered to be the first unless any hosts have the primary
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
+
 
 role :app, %w{ubuntu@34.203.94.126}
 role :web, %w{ubuntu@34.203.94.126}
