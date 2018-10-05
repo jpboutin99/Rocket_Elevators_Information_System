@@ -6,3 +6,5 @@
 //= require jquery.themepunch.tools.min
 //= require jquery.themepunch.revolution.min
 //= require demo.revolution_slider
+//= require owl.carousel
+//= require owl.carousel.min

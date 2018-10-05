@@ -11,11 +11,11 @@
 
 
 				<div class="text-center">
-					<ul class="nav nav-pills mix-filter mb-60 dany34">
-						<li id='residential' data-filter="residential" class="filter"><a href="#">Residential</a></li>
-						<li id='commercial' data-filter="commercial" class="filter"><a href="#">Commercial</a></li>
-						<li id='corporate' data-filter="corporate" class="filter"><a href="#">Corporate</a></li>
-						<li id='hybrid' data-filter="hybrid" class="filter"><a href="#">Hybrid</a></li>
+					<ul class="nav nav-pills mix-filter mb-60">
+						<li id='residential' data-filter="residential" class="filter"  value="Residential"><a href="#">Residential</a></li>
+						<li id='commercial' data-filter="commercial" class="filter"  value="Residential"><a href="#">Commercial</a></li>
+						<li id='corporate' data-filter="corporate" class="filter"  value="Corporate"><a href="#">Corporate</a></li>
+						<li id='hybrid' data-filter="hybrid" class="filter"  value="Hybrid"><a href="#">Hybrid</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 
 								<div class="card-block">
 
-									<form class="validate"  method="post" enctype="multipart/form-data" data-success="Sent! Thank you!"
+									<form action="/new_quote" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!"
 									 data-toastr-position="top-right">
 										<fieldset>
 
@@ -43,49 +43,49 @@
 												
 											    <div class="col-md-4 col-sm-6 mix residential commercial corporate hybrid">
 											        <label>First Name *</label>
-											        <input type="text" name="contact[first_name]" value="" class="form-control required" id="first name">
+											        <input type="text" name="quote[first_name]" value="" class="form-control required" id="first name">
 										        </div>												
 										        <div class="col-md-4 col-sm-6 mix residential commercial corporate hybrid">
 											        <label>Last Name *</label>
-											        <input type="text" name="contact[last_name]" value="" class="form-control required" id="last name">
+											        <input type="text" name="quote[last_name]" value="" class="form-control required" id="last name">
 										        </div>
 										        <div class="col-md-4 col-sm-6 mix residential commercial corporate hybrid">
 												    <label>Email *</label>
-												    <input type="text" name="contact[last_name]" value="" class="form-control required" id="email">
+												    <input type="text" name="quote[email]" value="" class="form-control required" id="email">
 										        </div>
 												
 												<div class="col-md-4 col-sm-6 mix residential">
 													<label>N. of Appartements *</label>
-													<input type="number" name="contact[first_name]" value="" class="form-control required" id="numApp">
+													<input type="number" name="quote[nb_apt]" value="" class="form-control required" id="numApp">
 												</div>												
 												<div class="col-md-4 col-sm-6 mix residential commercial corporate hybrid">
 													<label>N. of Floors *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="numFloors">
+													<input type="number" name="quote[nb_floors]" value="" class="form-control required" id="numFloors">
 												</div>
 												<div class="col-md-4 col-sm-6 mix residential commercial corporate hybrid">
-														<label>N. of Basements *</label>
-														<input type="number" name="contact[last_name]" value="" class="form-control required" id="numBase">
+													<label>N. of Basements *</label>
+													<input type="number" name="quote[nb_base]" value="" class="form-control required" id="numBase">
 												</div>
 												
 												<div class="col-md-4 col-sm-6 mix commercial hybrid">
 													<label>N. of Companies *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="numComp">
+													<input type="number" name="quote[nb_cies]" value="" class="form-control required" id="numComp">
 												</div>
 												<div class="col-md-4 col-sm-6 mix commercial corporate hybrid">
 													<label>N. of Parking Spots *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="numPark">
+													<input type="number" name="quote[nb_parking]" value="" class="form-control required" id="numPark">
 												</div>
 												<div class="col-md-4 col-sm-6 mix commercial">
 													<label>N. of Elevator Shaft *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="numElev">
+													<input type="number" name="quote[nb_shaft]" value="" class="form-control required" id="numElev">
 												</div>
 												<div class="col-md-4 col-sm-6 mix corporate">
 													<label>N. of Corporations *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="numCorpo">
+													<input type="number" name="quote[nb_corp]" value="" class="form-control required" id="numCorpo">
 												</div>
 												<div class="col-md-4 col-sm-6 mix corporate hybrid">
 													<label>Max Occ. per Floor *</label>
-													<input type="number" name="contact[last_name]" value="" class="form-control required" id="maxOcc">
+													<input type="number" name="quote[nb_person]" value="" class="form-control required" id="maxOcc">
 												</div>
 												<div class="col-md-4 col-sm-6 mix hybrid">
 													<!-- select2 -->
@@ -127,12 +127,15 @@
 														<i class="fancy-arrow-"></i>
 													</div>
 
+												<div class="col-md-4 col-sm-6 mix">
+													<input type="hidden" name="quote[quotetype]" value="" class="form-control required" id="type">
+												</div>	
 
 												</div>
 
 												<div class="col-md-12 col-sm-12 mix residential commercial corporate hybrid">
 													<label>Required Elevators</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="numElev_3">
+													<input type="text" name="quote[req_elev]" value="" class="form-control required" id="numElev_3">
 												</div>
 
 												<div class="col-md-12 col-sm-12 mix residential commercial corporate hybrid">
@@ -143,17 +146,17 @@
 
 													<!-- radio -->
 													<label class="radio">
-														<input type="radio" name="radio-btn" value="1" id="standard">
+														<input type="radio" name="quote[option]" value="Standard" id="standard">
 														<i></i> Standard
 													</label>
 
 													<label class="radio">
-														<input type="radio" name="radio-btn" value="1" id="premium">
+														<input type="radio" name="quote[option]" value="Premium" id="premium">
 														<i></i> Premium
 													</label>
 
 													<label class="radio">
-														<input type="radio" name="radio-btn" value="1" id="excelium">
+														<input type="radio" name="quote[option]" value="Excelium" id="excelium">
 														<i></i> Excelium
 													</label>
 
@@ -168,34 +171,35 @@
 
 												<div class="col-md-3 col-sm-12 mix residential commercial corporate hybrid">
 													<label>N. of Elevator</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="numElev_2">
+													<input type="text" name="quote[nb_elev]" value="" class="form-control required" id="numElev_2">
 												</div>
 
 												<div class="col-md-3 col-sm-12 mix residential commercial corporate hybrid">
 													<label>Unit Price ($)</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="elevPriceUnit">
+													<input type="text" name="quote[price_per_elev]" value="" class="form-control required" id="elevPriceUnit">
 												</div>
 
 												<div class="col-md-3 col-sm-12 mix residential commercial corporate hybrid">
 													<label>Elevators Total ($)</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="elevTotal">
+													<input type="text" name="quote[elev_total]" value="" class="form-control required" id="elevTotal">
 												</div>
 
 												<div class="col-md-3 col-sm-12 mix residential commercial corporate hybrid">
 													<label>Installation ($)</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="installationFee">
+													<input type="text" name="quote[cost_install]" value="" class="form-control required" id="installationFee">
 												</div>
 
 												<div class="col-md-3 col-sm-12 mix residential commercial corporate hybrid">
 													<label>Total ($)</label>
-													<input type="text" name="contact[last_name]" value="" class="form-control required" id="total_">
+													<input type="text" name="quote[total]" value="" class="form-control required" id="total_">
 												</div>
 
 											</div>
 
-                                        </fieldset>
+										</fieldset>
+										<button class="btn btn-submit btn-lg" type="submit">SUBMIT QUOTE &nbsp; <i class="fa fa-angle-right"></i></button>
                                     </form>
-                                    <a class="btn btn-submit btn-lg" href="index-Quote.html">SUBMIT QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+                                    
 								</div>
 						  </div>
 					   </div>

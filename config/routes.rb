@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/residential' =>'home#residential'
   get '/commercial' =>'home#commercial'
   get '/quote' =>'quote#quote'
-  post '/quote' =>'quote#quote_post'
+  post '/new_quote' =>'quote#new_quote'
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'home#index'
 

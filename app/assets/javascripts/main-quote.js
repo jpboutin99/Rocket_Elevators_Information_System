@@ -7,20 +7,22 @@ $(document).ready(function () {
     document.getElementById("installationFee").readOnly = true;
     document.getElementById("total_").readOnly = true;
 
-    var numApp;
-    var numFloors;
-    var numBase;
-    var numTower;
-    var numElev;
-    var maxOcc;
-    var totalMaxOcc;
-    var numAverElev;
-    var finNumElev;
-    var totalNumFloors;
-    var roughTotal;
-    var total;
-    var installFee;
-    var prodRange;
+    let numApp;
+    let numFloors;
+    let numBase;
+    let numTower;
+    let numElev;
+    let maxOcc;
+    let totalMaxOcc;
+    let numAverElev;
+    let finNumElev;
+    let totalNumFloors;
+    let roughTotal;
+    let total;
+    let installFee;
+    let prodRange;
+
+    
 
 
     $('#numApp').on('keyup', function () {
@@ -76,18 +78,26 @@ $(document).ready(function () {
 
     $('#residential').on('click', function () {
         initialize();
+        document.getElementById('type').value = "residential";
+        console.log(document.getElementById('type').value);
     });
 
     $('#commercial').on('click', function () {
         initialize();
+        document.getElementById('type').value = "commercial";
+        console.log(document.getElementById('type').value);
     });
 
     $('#corporate').on('click', function () {
         initialize();
+        document.getElementById('type').value = "corporate";
+        console.log(document.getElementById('type').value);
     });
 
     $('#hybrid').on('click', function () {
         initialize();
+        document.getElementById('type').value = "hybrid";
+        console.log(document.getElementById('type').value);
     });
 
     function initialize() {
@@ -110,6 +120,8 @@ $(document).ready(function () {
         $('#premium').prop('checked', false);
         $('#excelium').prop('checked', false);
     };
+
+    
 
     function getInfoNumApp() {
         numApp = document.getElementById('numApp').value;
