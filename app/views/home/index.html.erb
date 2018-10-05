@@ -224,13 +224,11 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-												<a class="ico-rounded lightbox" href="assets/images/portfolio_award1.jpg" data-plugin-options='{"type":"image"}'>
-													<span class="fa fa-plus fs-20"></span>
-												</a>
+												
 											</span>
                                         </span>
-                                        <%= image_tag("portfolio_award1.jpg", alt: "cover image", data: {lazyload: asset_url("residential_page2.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
-                                        #<img class="img-fluid" width="600" height="399" alt="elevators">
+                                
+										<%= image_tag("portfolio_award1.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_award1.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                     </figure>
 							</div>
 
@@ -247,13 +245,12 @@
 								        <span class="inner">
 
 								            <!-- lightbox -->
-								                <a class="ico-rounded lightbox" href="assets/images/house_elevator2.jpg" data-plugin-options='{"type":"image"}'>
-													<span class="fa fa-plus fs-20"></span>
-												</a>
+								                
 								        </span>
                                     </span>
-                                    <%= image_tag("house_elevator2.jpg", alt: "cover image", data: {lazyload: asset_url("residential_page2.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
-								</figure>
+                                    
+									<%= image_tag("house_elevator2.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("house_elevator2.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
+									</figure>
 				            </div>
 							<h3 class="mt-10">Residential Services</h3>
 							<p>We offer a wide variety of products for your home and can adjust to every needs you have to be happy with your residential transportation.</p>
@@ -268,13 +265,12 @@
 								        <span class="inner">
 
 								            <!-- lightbox -->
-								                <a class="ico-rounded lightbox" href="assets/images/corporate_elevator.jpg" data-plugin-options='{"type":"image"}'>
-													<span class="fa fa-plus fs-20"></span>
-												</a>
+								               
 								        </span>
                                     </span>
-                                <%= image_tag("corporate_elevator.jpg", alt: "cover image", data: {lazyload: asset_url("residential_page2.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
-                                #<img class="img-fluid" width="600" height="399" alt="elevators">
+                                
+								<%= image_tag("corporate_elevator.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("corporate_elevator.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
+								
                                 </figure>
 				            </div>
 							<h3 class="mt-10">Corporate Services</h3>
@@ -292,7 +288,7 @@
 
 
 			<!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('assets/images/parallax_bg.jpeg');">
+			<section class="parallax parallax-1" style="background-image: url(<%= asset_path 'parallax_bg.jpeg' %>);">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
@@ -310,7 +306,7 @@
 
 
 			<!-- PORTFOLIO -->
-			<section id="work">
+			<section id="featuredworks">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -341,9 +337,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_award1.jpg", :class => "img-fluid"%>
+                                              
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_award1.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_award1.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -367,9 +364,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_award2.jpeg", :class => "img-fluid"%>
+                                                
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_award2.jpeg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_award2.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -391,13 +389,12 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-												<a class="ico-rounded lightbox" href="assets/images/portfolio_award3.jpeg" data-plugin-options='{"type":"image"}'>
-													<span class="fa fa-plus fs-20"></span>
-												</a>
+												
+											
 											</span>
 										</span>
-                                        <%= image_tag("portfolio_award3.jpeg", alt: "cover image", data: {lazyload: asset_url("residential_page2.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
-										#<img class="img-fluid" width="600" height="399" alt="elevators">
+                                        <%= image_tag("portfolio_award3.jpeg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_award3.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
+										
 									</figure>
 
 									<div class="item-box-desc">
@@ -421,13 +418,14 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_res1.jpg", :class => "img-fluid"%>
+                                              
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_res1.jpeg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_res1.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
-										<h3>Jane Doe's House, Montreal</h3>
+										<h3>Jane Does House, Montreal</h3>
 										<ul class="list-inline categories m-0">
 											<li><a href="index-rocketElevators-residential.html">Residential Elevator</a></li>
 										</ul>
@@ -447,13 +445,14 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_res2.jpg", :class => "img-fluid"%>
+                                                
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_res2.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_res2.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
-										<h3>Michael Scott's House, Scranton, Pennsylvania</h3>
+										<h3>Michael Scotts House, Scranton, Pennsylvania</h3>
 										<ul class="list-inline categories m-0">
 											<li><a href="index-rocketElevators-residential.html">Residential Elevator</a></li>
 										</ul>
@@ -473,13 +472,14 @@
 											    <span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_res3.jpg", :class => "img-fluid"%>
+                                               
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_res3.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_res3.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
-										<h3>Erickson Family's House, Dowesatrepla, New York</h3>
+										<h3>Erickson Familys House, Dowesatrepla, New York</h3>
 										<ul class="list-inline categories m-0">
 											<li><a href="index-rocketElevators-residential.html">Residential Elevator</a></li>
 										</ul>
@@ -499,9 +499,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_res4.jpeg", :class => "img-fluid"%>
+                                                
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_res4.jpeg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_res4.jpeg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -526,9 +527,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_corpo1.jpg", :class => "img-fluid"%>
+                                               
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_corpo1.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_corpo1.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -551,9 +553,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_corpo2.jpg", :class => "img-fluid"%>
+                                                
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_corpo2.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_corpo2.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -576,9 +579,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_corpo3.jpg", :class => "img-fluid"%>
+                                               
                                                 </span>
-                                            </span>
+											</span>
+											<%= image_tag("portfolio_corpo3.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_corpo3.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                         </figure>
 
 									<div class="item-box-desc">
@@ -601,9 +605,10 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-                                                <%= image_tag"portfolio_corpo5.jpg", :class => "img-fluid"%>
+                                                
 											</span>
 										</span>
+										<%= image_tag("portfolio_corpo4.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_corpo4.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                     </figure>
 											
 									<div class="item-box-desc">
@@ -626,9 +631,10 @@
 											<span class="inner">
 
                                                 <!-- lightbox -->
-                                                <%= image_tag"portfolio_corpo5.jpg", :class => "img-fluid"%>
+                                               
 											</span>
 										</span>
+										<%= image_tag("portfolio_corpo5.jpg", :width => "500", :height => "250", data: {lazyload: asset_url("portfolio_corpo5.jpg"), bgfit: "cover", bgposition: "center center", bgrepeat: "no-repeat"}) %>
                                     </figure>
                                     
 									<div class="item-box-desc">
@@ -659,7 +665,7 @@
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 						<div class="testimonial">
 							<figure>
-                                <%= image_tag "CEO2.jpg", :class => "img-circular", :height => '400px' %>
+                                <%= image_tag("CEO2.jpg", :class=> "img-circular", :height => "400px") %>
                                 <figcaption>CEO of Rocket Elevators</figcaption>
                             </figure>
 							<div class="testimonial-content p-0">
@@ -672,7 +678,7 @@
 						</div>
 						<div class="testimonial">
 							<figure>
-                                <%= image_tag "emp_month1.jpg", :class => "img-circular", :height => '400px' %>
+                                <%= image_tag "emp_month1.jpg", :class=> "img-circular", :height => '400px' %>
                                 <figcaption>Employee of the month</figcaption>							
                             </figure>
 							<div class="testimonial-content p-0">
@@ -720,7 +726,7 @@
                             </a>
                             
 							<h4 class="text-left mt-20"><a href="#">First Earth-Mars Elevator now fully operational!</a></h4>
-							<p class="text-left">We have all dreamt about it, we even lost hope once or twice, but now it's here! You can now reach Mars in 1327 seconds.</p>
+							<p class="text-left">We have all dreamt about it, we even lost hope once or twice, but now it is here! You can now reach Mars in 1327 seconds.</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
@@ -734,7 +740,7 @@
                             </a>
                             
 							<h4 class="text-left mt-20"><a href="#">Tallest Elevator ever made</a></h4>
-							<p class="text-left">Unbeaten for almost 16 years, the record for the tallest elevator has finally been broken. The Kingdom Tower now boast the world's tallest lift at 660m (2,165ft).  </p>
+							<p class="text-left">Unbeaten for almost 16 years, the record for the tallest elevator has finally been broken. The Kingdom Tower now boast the worlds tallest lift at 660m (2,165ft).  </p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
@@ -748,7 +754,7 @@
                             </a>
 
                             <h4 class="text-left mt-20"><a href="#">Magnetic Elevator</a></h4>
-							<p class="text-left">At Rocket Elevators, we constantly try to develop new Futuristic Elevator Technologies (FET). We're currently working on a fully magnetic elevator design. Check our first draft right here. </p>
+							<p class="text-left">At Rocket Elevators, we constantly try to develop new Futuristic Elevator Technologies (FET). We are currently working on a fully magnetic elevator design. Check our first draft right here. </p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
