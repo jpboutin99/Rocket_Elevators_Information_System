@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
+  config.label_methods << :full_name
   ## == Cancan ==
   # config.authorize_with :cancan
 
