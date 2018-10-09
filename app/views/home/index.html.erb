@@ -915,44 +915,44 @@
 							</div><!-- /Alert Mandatory -->
 
 
-							<form  method="post" enctype="multipart/form-data">
+							<form id="my_form"  method="post" action="/new_lead" enctype="multipart/form-data">
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
 
 									<div class="row">
 											<div class="col-md-4">
 												<label for="contact:name">Full Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<input required type="text" value="" class="form-control" name="lead[full_name][required]" id="lead:name">
 											</div>
                                             
 											<div class="col-md-4">
 												<label for="contact:email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<input required type="email" value="" class="form-control" name="lead[email][required]" id="lead:email">
 											</div>
 											<div class="col-md-4">
 												<label for="contact:phone">Phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<input type="text" value="" class="form-control" name="lead[phone]" id="lead:phone">
 											</div>
 									</div>
                                     <div class="row">
 											
                                             <div class="col-md-6">
 												<label for="contact:name">Company Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[company_name][required]" id="contact:company_name">
+												<input required type="text" value="" class="form-control" name="lead[company_name][required]" id="lead:company_name">
 											</div>
                                             <div class="col-md-6">
 												<label for="contact:phone">Project Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[project_name]" id="contact:project_name">
+												<input required type="text" value="" class="form-control" name="lead[project_name]" id="lead:project_name">
 											</div>
 									</div>
                                     <div class="row">
 											<div class="col-md-8">
 												<label for="contact:message">Project Description *</label>
-												<textarea required maxlength="5000" rows="4" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<textarea required maxlength="5000" rows="4" class="form-control" name="lead[project_description]" id="lead:message"></textarea>
 											</div>
                                             <div class="col-md-4">
 												<label for="contact_department">Department</label>
-												<select class="form-control pointer" name="contact[department]">
+												<select class="form-control pointer" name="lead[department]">
 													<option value="">--- Select ---</option>
 													<option value="Marketing">Residential Services</option>
 													<option value="Webdesign">Corporate Services</option>
@@ -962,7 +962,7 @@
 									<div class="row">
 											<div class="col-md-12">
 												<label for="contact:message">Message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message] [required]" id="contact:message"></textarea>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="lead[message] [required]" id="lead:message"></textarea>
 											</div>
 									</div>
 									<div class="row">
@@ -970,7 +970,7 @@
 												<label for="contact:attachment">File Attachment</label>
 
 												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<input class="custom-file-upload" type="file" id="file" name="lead[file_attachment]" id="lead:attachment" data-btn-text="Select a File" />
 												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 											</div>
@@ -984,6 +984,28 @@
 									</div>
 								</div>
 							</form>
+
+
+							<script>
+							$("#my_form").submit(function(event){
+								event.preventDefault(); //prevent default action 
+								var post_url = $(this).attr("action"); //get form action url
+								var request_method = $(this).attr("method"); //get form GET/POST method
+								var form_data = $(this).serialize(); //Encode form elements for submission
+								
+								$.ajax({
+									url : post_url,
+									type: request_method,
+									data : form_data
+								}).done(function(response){ //
+									alert('YOUR MESSAGE HAVE BEEN RECEIVED');
+									window.location="/";
+								});
+							});
+						</script>
+
+
+
 
 						</div>
 						<!-- /FORM -->
