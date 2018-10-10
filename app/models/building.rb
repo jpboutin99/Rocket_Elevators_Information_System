@@ -1,4 +1,4 @@
 class Building < ApplicationRecord
   belongs_to :customer
-  belongs_to :addresses
+  belongs_to :address
 end
