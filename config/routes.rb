@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/index-rocketElevators-commercial.html' => 'home#commercial'
   get '/index-Quote.html' => 'quote#quote'
   post '/new_quote' =>'quote#new_quote'
+  post '/new_lead' =>'lead#new_lead'
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'home#index'
 
