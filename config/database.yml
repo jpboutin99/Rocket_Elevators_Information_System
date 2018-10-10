@@ -16,7 +16,6 @@ default: &default
   username: root
   password: codeboxx
   host: localhost
-  port: 3306
 
 development:
   <<: *default
