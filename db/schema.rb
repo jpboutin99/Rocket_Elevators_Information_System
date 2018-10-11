@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_132632) do
+ActiveRecord::Schema.define(version: 2018_10_10_144033) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(version: 2018_10_10_132632) do
     t.datetime "updated_at", null: false
     t.index ["building_id"], name: "index_batteries_on_building_id"
     t.index ["employee_id"], name: "index_batteries_on_employee_id"
+  end
+
+  create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "building_id"
+    t.string "information_key"
+    t.string "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_building_details_on_building_id"
   end
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -153,6 +162,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_132632) do
     t.binary "file_attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "attachment_file"
     t.index ["customer_id"], name: "index_leads_on_customer_id"
   end
 
@@ -223,6 +233,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_132632) do
 
   add_foreign_key "batteries", "buildings"
   add_foreign_key "batteries", "employees"
+  add_foreign_key "building_details", "buildings"
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"

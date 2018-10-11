@@ -970,7 +970,7 @@
 											<label for="contact:attachment">File Attachment</label>
 
 											<!-- custom file upload -->
-											<input class="custom-file-upload" type="file" id="file" name="lead[file_attachment]" id="lead:attachment" data-btn-text="Select a File" />
+											<input class="custom-file-upload" type="file" id="file" name="lead[attachment_file]" id="lead:attachment" data-btn-text="Select a File" />
 											<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 										</div>
@@ -998,8 +998,8 @@
 								type: request_method,
 								data : form_data
 							}).done(function(response){ //
-								alert('YOUR MESSAGE HAVE BEEN RECEIVED');
 								window.location="/";
+								alert('YOUR MESSAGE HAVE BEEN RECEIVED');						
 							});
 						});
 					</script>
