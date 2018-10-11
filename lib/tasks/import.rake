@@ -65,5 +65,14 @@ namespace :import do
         elevator = Elevator.create!(column_id: column.id, serial_number: row["Serial Number"], model: row["Model"], building_type: column.building_type, status: row["Status"], in_service_since: row["In Service Since"], last_inspection: row["Last Inspection"], inspection_certificate: row["Inspection Certificate"], information: row["Information"],notes: row["Notes"], created_at: row["Created At"], updated_at: row["Updated At"])
     end
   end
+
+  task buildingDetails: :environment do 
+    filename = File.join Rails.root, "Building_Details.csv"
+
+    CSV.foreach(filename, headers: true) do |row|
+        detail = BuildingDetail.create!(building_id: row["Id"], information_key: row["Information key"], value: row["Value"])
+    end
+  end
+
 end
 
