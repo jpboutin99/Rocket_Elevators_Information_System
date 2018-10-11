@@ -1,0 +1,251 @@
+Address Type,Status,Entity,StreetAddress,Suite or App,City,ZipCode,Country,Notes
+Shipping,Active,Customer,351 Landon Street,-,Bonfield,P0H 1E0,Canada,-
+Billing,Active,Building,2276 Port Washington Road,-,Didsbury,T0M 0W0,Canada,-
+Home,Active,Customer,882 Adelaide St,-,Toronto,M5H 1P6,Canada,-
+Business,Active,Building,110 Nelson Street,-,Kasabonika,P0V 1Y0,Canada,-
+Business,Active,Customer,4896 Riedel Street,-,Fort Mcmurray,T9H 3J9,Canada,-
+Home,Active,Building,585 Port Washington Road,-,Claresholm,T0L 0T0,Canada,-
+Business,Active,Customer,2990 Rose Street,-,Regina,S4P 3Y2,Canada,-
+Home,Active,Building,2096 Ontario St,-,St Catharines,L2N 1S8,Canada,-
+Billing,Active,Customer,3099 Port Washington Road,-,Arrowwood,T0L 0B0,Canada,-
+Home,Active,Building,1267 Burdett Avenue,-,Victoria,V8N 2A4,Canada,-
+Shipping,Active,Customer,4922 St Jean Baptiste St,-,Ste Marie De Blandford,G0X 2W0,Canada,-
+Business,Active,Building,3578 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Home,Active,Customer,3395 rue Saint-Édouard,-,Trois Rivieres,G9A 5S8,Canada,-
+Business,Active,Building,4193 Hardy Street,-,Kelowna,V1Y 8H2,Canada,-
+Shipping,Active,Customer,4932 Jasper Avenue,-,Edmonton,T5J 3N2,Canada,-
+Billing,Active,Building,3227 Robson St,-,Vancouver,V6B 3K9,Canada,-
+Business,Active,Customer,2516 rue Parc,-,Sherbrooke,J1L 1C9,Canada,-
+Business,Active,Building,4143 Burdett Avenue,-,Victoria,V8R 5A7,Canada,-
+Billing,Active,Customer,1688 St. Paul Street,-,St Catharines,L2R 7L4,Canada,-
+Home,Active,Building,3181 Roger Street,-,Courtenay,V9N 2J6,Canada,-
+Business,Active,Customer,3855 René-Lévesque Blvd,-,Montreal,H3B 4W8,Canada,-
+Shipping,Active,Building,2273 Adelaide St,-,Toronto,M5H 1P6,Canada,-
+Business,Active,Customer,2338 Calgary Avenue,-,Penticton,V2A 2T6,Canada,-
+Home,Active,Building,1384 Bloor Street,-,Galahad,T0B 1R0,Canada,-
+Business,Active,Customer,3188 Carlson Road,-,Prince George,V2L 5E5,Canada,-
+Home,Active,Building,302 50th Avenue,-,Whitecourt,T7S 1A1,Canada,-
+Business,Active,Customer,2326 St Jean Baptiste St,-,Baie St Paul,G0A 1B0,Canada,-
+Business,Active,Building,3876 Craven Place,-,Medicine Hat,T1A 0N1,Canada,-
+Shipping,Active,Customer,1137 St. John Street,-,Davidson,S4P 3Y2,Canada,-
+Business,Active,Building,2365 Quayside Dr,-,New Westminster,V3M 6A1,Canada,-
+Home,Active,Customer,3365 Davis Drive,-,Unionville,L3R 3Y4,Canada,-
+Home,Active,Building,2198 rue Saint-Antoine,-,St Hyacinthe,J2S 2T3,Canada,-
+Business,Active,Customer,2433 René-Lévesque Blvd,-,Montreal,H3B 4W8,Canada,-
+Business,Active,Building,796 Speers Road,-,Oakville,L6J 3X4,Canada,-
+Shipping,Active,Customer,4290 Merivale Road,-,Ottawa,K2G 3K2,Canada,-
+Business,Active,Building,4208 Ross Street,-,Renfrew,K7V 1T5,Canada,-
+Business,Active,Customer,3246 40th Street,-,Calgary,T2E 6X1,Canada,-
+Home,Active,Building,3854 Cork St,-,Guelph,N1H 2W8,Canada,-
+Business,Active,Customer,34 Northumberland Street,-,Elora,N0B 1S0,Canada,-
+Business,Active,Building,183 Halsey Avenue,-,Toronto,M3B 2W6,Canada,-
+Shipping,Active,Customer,627 Tanner Street,-,Vancouver,V5R 2T4,Canada,-
+Business,Active,Building,2249 Carlson Road,-,Prince George,V2L 5E5,Canada,-
+Home,Active,Customer,146 James Street,-,Hearst,P0L 1N0,Canada,-
+Business,Active,Building,4666 Tycos Dr,-,Toronto,M5T 1T4,Canada,-
+Billing,Active,Customer,1398 Queen Elisabeth Blvd,-,Kinistino,S4P 3Y2,Canada,-
+Business,Active,Building,2460 rue Levy,-,Montreal,H3C 5K4,Canada,-
+Home,Active,Customer,4056 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Billing,Active,Building,83 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Business,Active,Customer,1758 Bayfield St,-,Barrie,L4M 4S7,Canada,-
+Business,Active,Building,838 Reserve St,-,Woodville,K0M 2T0,Canada,-
+Billing,Active,Customer,793 Robson St,-,Vancouver,V6B 3K9,Canada,-
+Business,Active,Building,2380 rue des Églises Est,-,Nemiscau,J0Y 3B0,Canada,-
+Business,Active,Customer,4721 Nelson Street,-,Stratton,P0W 1N0,Canada,-
+Billing,Active,Building,2548 Pine Street,-,Castor,T0C 0X0,Canada,-
+Business,Active,Customer,555 St Jean Baptiste St,-,Havre St Pierre,G0G 1P0,Canada,-
+Home,Active,Building,1481 Goyeau Ave,-,Windsor,N9A 1H9,Canada,-
+Shipping,Active,Customer,426 Halmans Road,-,Glenfinnan,C1B 0Z9,Canada,-
+Business,Active,Building,3500 Mill Street,-,Seaforth,N0K 1W0,Canada,-
+Business,Active,Customer,4692 Derry Rd,-,Malton,L4T 1A8,Canada,-
+Home,Active,Building,3980 MacLaren Street,-,Ottawa,K1P 5M7,Canada,-
+Business,Active,Customer,143 4th Ave,-,Stirling,T0K 2E0,Canada,-
+Business,Active,Building,3545 Reserve St,-,Whitney,K0J 2M0,Canada,-
+Home,Active,Customer,3647 St Marys Rd,-,Winnipeg,R2X 2Y7,Canada,-
+Business,Active,Building,2636 Quayside Dr,-,New Westminster,V3M 6A1,Canada,-
+Shipping,Active,Customer,4297 Nelson Street,-,Shebandowan,P0T 2T0,Canada,-
+Business,Active,Building,4361 Jasper Ave,-,Edmonton,T5J 3N6,Canada,-
+Home,Active,Customer,2597 184th Street,-,Edmonton,T5J 2R4,Canada,-
+Business,Active,Building,43 Baker Street,-,London,N0N 0N0,Canada,-
+Home,Active,Customer,4231 Robson St,-,Vancouver,V6B 3K9,Canada,-
+Shipping,Active,Building,3208 Scarth Street,-,Montreal,S4P 3Y2,Canada,-
+Business,Active,Customer,195 Bay Street,-,Toronto,M5J 2R8,Canada,-
+Home,Active,Building,1280 rue Levy,-,Montreal,H3C 5K4,Canada,-
+Business,Active,Customer,4015 Woodvale Drive,-,Brownsville,N0L 1C0,Canada,-
+Shipping,Active,Building,4777 Rayborn Crescent,-,St Albert,T8N 1C7,Canada,-
+Business,Active,Customer,1638 Davis Drive,-,Port Colborne,L3K 3M2,Canada,-
+Home,Active,Building,4881 Yonge Street,-,Toronto,M4W 1J7,Canada,-
+Billing,Active,Customer,1850 Tchesinkut Lake Rd,-,Vanderhoof,V0J 3A0,Canada,-
+Business,Active,Building,4949 Côte Joyeuse,-,Senneterre,H0H 0H0,Canada,-
+Billing,Active,Customer,978 50th Street,-,Edmonton,T6B 2W9,Canada,-
+Home,Active,Building,1535 Queens Sq,-,Hespeler,N3C 1H3,Canada,-
+Business,Active,Customer,3637 Dufferin Street,-,Toronto,M6H 4B6,Canada,-
+Shipping,Active,Building,4300 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Business,Active,Customer,4308 Garden Drive,-,Kensington,C0B 1M0,Canada,-
+Home,Active,Building,3061 Davis Drive,-,Welland,L3B 3Z6,Canada,-
+Business,Active,Customer,2873 Carling Avenue,-,Ottawa,K1Z 7B5,Canada,-
+Business,Active,Building,3986 Danforth Avenue,-,Toronto,M4K 1A6,Canada,-
+Home,Active,Customer,1430 Merton Street,-,Toronto,M1L 3K7,Canada,-
+Business,Active,Building,3621 Montreal Road,-,Ottawa,K1L 6C7,Canada,-
+Business,Active,Customer,601 Goyeau Ave,-,Windsor,N9A 1H9,Canada,-
+Shipping,Active,Building,3833 rue des Églises Est,-,Lac Des Ecorces,J0W 1H0,Canada,-
+Business,Active,Customer,3029 Bay Street,-,Toronto,M5J 2R8,Canada,-
+Billing,Active,Building,2196 Craven Place,-,Medicine Hat,T1A 0N1,Canada,-
+Business,Active,Customer,1437 Sturgeon Drive,-,Fort Saskatchewan,T8L 2H4,Canada,-
+Home,Active,Building,3040 Stum Lake Road,-,Likely,V0L 1N0,Canada,-
+Business,Active,Customer,1225 90th Avenue,-,Irvine,T0J 1V0,Canada,-
+Billing,Active,Building,3237 184th Street,-,Edmonton,T5J 2R4,Canada,-
+Business,Active,Customer,3076 Hyde Park Road,-,London,N6B 2Y4,Canada,-
+Home,Active,Building,4481 Dundas St,-,Toronto,M2N 2G8,Canada,-
+Business,Active,Customer,796 St George Street,-,Vancouver,V5T 1Z7,Canada,-
+Shipping,Active,Building,496 Heritage Drive,-,Calgary,T2V 2W2,Canada,-
+Business,Active,Customer,2972 Pitfield Blvd,-,Long Pond,H9S 3H3,Canada,-
+Business,Active,Building,976 Derry Rd,-,Malton,L4T 1A8,Canada,-
+Billing,Active,Customer,79 Carling Avenue,-,Ottawa,K1Z 7B5,Canada,-
+Business,Active,Building,1007 Calgary Avenue,-,Penticton,V2A 2T6,Canada,-
+Home,Active,Customer,4929 Hardy Street,-,Kelowna,V1Y 8H2,Canada,-
+Business,Active,Building,1665 Sheppard Ave,-,Toronto,M1S 1T4,Canada,-
+Billing,Active,Customer,644 40th Street,-,Calgary,T2K 0P7,Canada,-
+Business,Active,Building,253 St. John Street,-,Coleville,S4P 3Y2,Canada,-
+Home,Active,Customer,3528 Adelaide St,-,Toronto,M5H 1P6,Canada,-
+Business,Active,Building,904 Bayfield St,-,Midland,L4S 1V5,Canada,-
+Shipping,Active,Customer,3948 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Business,Active,Building,2270 Duke Street,-,Montreal,H3C 5K4,Canada,-
+Billing,Active,Customer,1887 3rd Avenue,-,Medicine Hat,T1A 8A5,Canada,-
+Business,Active,Building,4096 Fallon Drive,-,Dyer Bay,N0Z 1Z0,Canada,-
+Home,Active,Customer,2784 Lockhart Drive,-,Barrie,L4M 3B1,Canada,-
+Billing,Active,Building,1351 Rose Street,-,Regina,S4P 3Y2,Canada,-
+Business,Active,Customer,2482 Hastings Street,-,Vancouver,V6C 1B4,Canada,-
+Business,Active,Building,2121 Cassells St,-,North Bay,P1B 2Y7,Canada,-
+Billing,Active,Customer,909 Boulevard Ste-Geneviève,-,St Ambroise De Chicoutimi,G7P 2K6,Canada,-
+Business,Active,Building,1332 Nelson Street,-,Fort Severn,P0V 1W0,Canada,-
+Business,Active,Customer,1396 Tycos Dr,-,Toronto,M5T 1T4,Canada,-
+Shipping,Active,Building,4770 Central Street,-,Yarmouth,B5A 3H1,Canada,-
+Home,Active,Customer,3183 St. John Street,-,Drake,S4P 3Y2,Canada,-
+Business,Active,Building,2848 Heritage Drive,-,Calgary,T2V 2W2,Canada,-
+Billing,Active,Customer,3095 Joseph St,-,Kitchener,N2C 1A7,Canada,-
+Business,Active,Building,1696 Bloor Street,-,Strome,T0B 4H0,Canada,-
+Billing,Active,Customer,3068 King George Hwy,-,Surrey,V3W 4E3,Canada,-
+Business,Active,Building,713 Lillooet Street,-,Prince Albert,S6V 1B3,Canada,-
+Business,Active,Customer,961 Hammarskjold Dr,-,Burnaby,V5B 3C9,Canada,-
+Business,Active,Building,1824 Sherbrooke Ouest,-,Montreal,H4A 1H3,Canada,-
+Shipping,Active,Customer,1148 Bloor Street,-,Ryley,T0B 4A0,Canada,-
+Home,Active,Building,4691 Merton Street,-,Toronto,M1L 3K7,Canada,-
+Business,Active,Customer,4615 Venture Place,-,Westlock,T0G 2L0,Canada,-
+Home,Active,Building,1607 11th Ave,-,Calgary,T2P 1M6,Canada,-
+Business,Active,Customer,2725 Lockhart Drive,-,Barrie,L4M 3B1,Canada,-
+Shipping,Active,Building,424 Woodvale Drive,-,Dutton,N0L 1J0,Canada,-
+Business,Active,Customer,4729 Parkdale Ave,-,Cornwall,K6J 3P7,Canada,-
+Business,Active,Building,279 Hardy Street,-,Kelowna,V1Y 8H2,Canada,-
+Billing,Active,Customer,3016 Bay Street,-,Toronto,M5J 2R8,Canada,-
+Shipping,Active,Building,4172 Hastings Street,-,Vancouver,V6C 1B4,Canada,-
+Home,Active,Customer,3517 Dry Pine Bay Rd,-,Coniston,P0M 1M0,Canada,-
+Business,Active,Building,2634 Landon Street,-,Warren,P0H 2N0,Canada,-
+Business,Active,Customer,3758 Royal Avenue,-,New Westminster,V3L 5H1,Canada,-
+Billing,Active,Building,126 Pitfield Blvd,-,Pointe Claire,H9R 2B5,Canada,-
+Home,Active,Customer,3271 Vulcan Avenue,-,South Bar,B1P 2Y3,Canada,-
+Business,Active,Building,325 Lauzon Parkway,-,Windsor,N8Y 4V1,Canada,-
+Shipping,Active,Customer,1018 40th Street,-,Edmonton,T2P 3Z3,Canada,-
+Business,Active,Building,1634 Cordova Street,-,Vancouver,V6B 1E1,Canada,-
+Home,Active,Customer,2957 rue Levy,-,Montreal,H3C 5K4,Canada,-
+Business,Active,Building,702 Davis Drive,-,Welland,L3B 3Z6,Canada,-
+Home,Active,Customer,3625 Brant Ave,-,Peerless Lake,T1T 1T1,Canada,-
+Business,Active,Building,2740 rue des Églises Est,-,Barraute,J0Y 1A0,Canada,-
+Business,Active,Customer,3250 Heritage Drive,-,Calgary,T2V 2W2,Canada,-
+Home,Active,Building,2235 Dominion St,-,Chesterville,K0C 1H0,Canada,-
+Business,Active,Customer,3452 Wentz Avenue,-,Saskatoon,S7K 7A9,Canada,-
+Business,Active,Building,2778 Fallon Drive,-,Holstein,N0G 2A0,Canada,-
+Shipping,Active,Customer,3493 Blind Bay Road,-,Chase,V0E 1M0,Canada,-
+Business,Active,Building,3687 rue Principale,-,La Sarre,J9Z 1H5,Canada,-
+Business,Active,Customer,4233 Baker Street,-,Cobourg,N0N 0N0,Canada,-
+Home,Active,Building,2676 rue Garneau,-,Quebec,G1V 3V5,Canada,-
+Business,Active,Customer,4794 Blanshard,-,Victoria,V8W 2H9,Canada,-
+Billing,Active,Building,534 Thurston Dr,-,Ottawa,K1G 0Z2,Canada,-
+Billing,Active,Customer,3241 James Street,-,Waterford,N0E 1Y0,Canada,-
+Business,Active,Building,4755 Park Ct,-,Robb,T0E 1X0,Canada,-
+Shipping,Active,Customer,3266 Papineau Avenue,-,Montreal,H2K 4J5,Canada,-
+Business,Active,Building,3744 Brand Road,-,Saskatoon,S7K 1W8,Canada,-
+Home,Active,Customer,299 Adelaide St,-,Toronto,M5H 1P6,Canada,-
+Business,Active,Building,3048 Orenda Rd,-,Brampton,L6W 1Z2,Canada,-
+Business,Active,Customer,1117 rue Levy,-,Montreal,H3C 5K4,Canada,-
+Shipping,Active,Building,636 James Street,-,St Catharines,L2R 3H6,Canada,-
+Billing,Active,Customer,1959 Parkdale Avenue,-,Hamilton,L8K 1A4,Canada,-
+Business,Active,Building,1239 Pearl Street,-,Streetsville,L5M 1X2,Canada,-
+Business,Active,Customer,648 St. Paul Street,-,Fort Erie,L2A 1P3,Canada,-
+Billing,Active,Building,3415 MacLaren Street,-,Ottawa,K1P 5M7,Canada,-
+Business,Active,Customer,4036 St Jean Baptiste St,-,Delisle,G0W 1L0,Canada,-
+Home,Active,Building,124 St. John Street,-,Buchanan,S4P 3Y2,Canada,-
+Shipping,Active,Customer,1985 Rogers Road,-,Toronto,M6E 1R1,Canada,-
+Billing,Active,Building,2052 Islington Ave,-,Toronto,M8V 3B6,Canada,-
+Business,Active,Customer,3769 St. John Street,-,Denzil,S4P 3Y2,Canada,-
+Business,Active,Building,3193 Toy Avenue,-,Bowmanville,L1C 2L8,Canada,-
+Shipping,Active,Customer,2113 Davis Drive,-,Markham,L3P 2M4,Canada,-
+Business,Active,Building,772 Halsey Avenue,-,Toronto,M3B 2W6,Canada,-
+Business,Active,Customer,1556 Harvest Moon Dr,-,Unionville,L3R 0L7,Canada,-
+Business,Active,Building,1669 rue Garneau,-,Quebec,G1V 3V5,Canada,-
+Business,Active,Customer,3645 Wellington Ave,-,Chilliwack,V2P 2M1,Canada,-
+Billing,Active,Building,2435 rue Saint-Charles,-,Longueuil,J4H 1M3,Canada,-
+Business,Active,Customer,2401 Duke Street,-,Montreal,H3C 5K4,Canada,-
+Business,Active,Building,3259 Benton Street,-,Kitchener,N2G 4L9,Canada,-
+Business,Active,Customer,1526 102nd Avenue,-,Dawson Creek,V1G 2C4,Canada,-
+Home,Active,Building,2576 Venture Place,-,Barrhead,T0G 0E0,Canada,-
+Business,Active,Customer,2306 Sherbrooke Ouest,-,Montreal,H4A 1H3,Canada,-
+Home,Active,Building,3713 St Jean Baptiste St,-,Ste Lucie De Beauregard,G0R 3L0,Canada,-
+Home,Active,Customer,299 Eglinton Avenue,-,Toronto,M4P 1A6,Canada,-
+Business,Active,Building,1047 Queens Sq,-,Hespeler,N3C 1H3,Canada,-
+Billing,Active,Customer,2520 Rogers Road,-,Toronto,M6E 1R1,Canada,-
+Business,Active,Building,401 102nd Avenue,-,Nelson,V1L 5Y5,Canada,-
+Business,Active,Customer,2007 Ross Terrasse,-,Fredericton,E3B 5W5,Canada,-
+Business,Active,Building,4296 Halsey Avenue,-,Toronto,M3B 2W6,Canada,-
+Billing,Active,Customer,1138 Joseph St,-,Kitchener,N2C 1A7,Canada,-
+Home,Active,Building,3641 Haaglund Rd,-,Winfield,V0H 2C0,Canada,-
+Business,Active,Customer,4066 rue Ontario Ouest,-,Montreal,H2X 1Y8,Canada,-
+Business,Active,Building,822 Merton Street,-,Toronto,M1L 3K7,Canada,-
+Home,Active,Customer,759 Speers Road,-,Brampton,L6W 1H9,Canada,-
+Shipping,Active,Building,3649 40th Street,-,Calgary,T2A 1C8,Canada,-
+Business,Active,Customer,672 Exmouth Street,-,Sarnia,N7T 4C8,Canada,-
+Home,Active,Building,4572 Ste. Catherine Ouest,-,Montreal,H7W 2V4,Canada,-
+Business,Active,Customer,2011 137th Avenue,-,Edmonton,T5J 2Z2,Canada,-
+Billing,Active,Building,535 René-Lévesque Blvd,-,Montreal,H3B 4W8,Canada,-
+Business,Active,Customer,1956 Silver Springs Blvd,-,Calgary,T3B 2C3,Canada,-
+Business,Active,Building,1067 Lynden Road,-,Gormley,L0H 1G0,Canada,-
+Shipping,Active,Customer,1572 50th Street,-,Vegreville,T9C 1S1,Canada,-
+Home,Active,Building,1133 rue Boulay,-,Ste Madeleine,J0H 1S0,Canada,-
+Business,Active,Customer,2210 James Street,-,Aldergrove,V5W 3P7,Canada,-
+Billing,Active,Building,1319 Halsey Avenue,-,Toronto,M3B 2W6,Canada,-
+Business,Active,Customer,2137 Tanner Street,-,Vancouver,V5R 2T4,Canada,-
+Billing,Active,Building,1182 9th Avenue,-,Hanover,N4N 2Z8,Canada,-
+Business,Active,Customer,3460 Lock Street,-,Guelph,N1H 4E5,Canada,-
+Business,Active,Building,170 Wallace Street,-,Nanaimo,V9R 3A8,Canada,-
+Business,Active,Customer,4300 5th Avenue,-,Beaverlodge,T0H 0C0,Canada,-
+Billing,Active,Building,911 chemin Hudson,-,Montreal,H4J 1M9,Canada,-
+Business,Active,Customer,3863 Haaglund Rd,-,Oliver,V0H 1T0,Canada,-
+Business,Active,Building,4150 Scotts Lane,-,Cobble Hill,V0R 1L1,Canada,-
+Billing,Active,Customer,1482 Victoria Park Ave,-,Toronto,M4A 2M5,Canada,-
+Business,Active,Building,3352 Barton Street,-,Hamilton,L8P 1P8,Canada,-
+Business,Active,Customer,1902 Isabella Street,-,Belleville,K8N 4Z5,Canada,-
+Home,Active,Building,1922 rue Levy,-,Montreal,H3C 5K4,Canada,-
+Billing,Active,Customer,1398 rue Ellice,-,Joliette,J6E 3E8,Canada,-
+Business,Active,Building,3356 Tanner Street,-,Vancouver,V5R 2T4,Canada,-
+Business,Active,Customer,177 Cordova Street,-,Vancouver,V6B 1E1,Canada,-
+Billing,Active,Building,1729 Lynden Road,-,Vineland,L0R 2E0,Canada,-
+Shipping,Active,Customer,990 102nd Avenue,-,Nelson,V1L 5Y5,Canada,-
+Business,Active,Building,4181 Carling Avenue,-,Ottawa,K1Z 7B5,Canada,-
+Business,Active,Customer,3439 A Avenue,-,Edmonton,T5J 0K7,Canada,-
+Home,Active,Building,3605 Carling Avenue,-,Ottawa,K1Z 7B5,Canada,-
+Billing,Active,Customer,3194 49th Avenue,-,Tuktoyaktuk,X0E 1C0,Canada,-
+Business,Active,Building,3160 rue Fournier,-,St Jerome,J7Z 5L3,Canada,-
+Business,Active,Customer,3701 St. Paul Street,-,Niagara Falls,L2E 4E6,Canada,-
+Business,Active,Building,2405 Heatherleigh,-,Cooksville,L5A 1V9,Canada,-
+Billing,Active,Customer,3502 Benton Street,-,Kitchener,N2G 4L9,Canada,-
+Business,Active,Building,4356 Tycos Dr,-,Toronto,M5T 1T4,Canada,-
+Shipping,Active,Customer,2791 Granville St,-,Halifax,B3K 5M1,Canada,-
+Business,Active,Building,389 Fallon Drive,-,Cottam,N0R 1B0,Canada,-
+Home,Active,Customer,4766 Rose Street,-,Regina,S4P 3Y2,Canada,-
+Business,Active,Building,4306 Bloor Street,-,Ryley,T0B 4A0,Canada,-
+Home,Active,Customer,1942 Dry Pine Bay Rd,-,Killarney,P0M 2A0,Canada,-
+Business,Active,Building,2774 Tycos Dr,-,Toronto,M5T 1T4,Canada,-
+Billing,Active,Customer,478 Hastings Street,-,Vancouver,V6C 1B4,Canada,-
+Business,Active,Building,797 St-Jacques Est,-,Charny,G6X 1T5,Canada,-
+Shipping,Active,Customer,4798 Saint-Denis Street,-,Montreal,H9R 3J4,Canada,-
+Home,Active,Building,4239 9th Ave,-,Lethbridge,T1J 2J7,Canada,-
