@@ -1,5 +1,15 @@
 RailsAdmin.config do |config|
 
+  config.model 'BuildingDetail' do
+    parent Building
+  end
+
+  config.model 'Column' do
+    parent Battery
+  end
+  config.model 'Elevator' do
+    parent Column
+  end
   ### Popular gems integration
 
   ## == Devise ==

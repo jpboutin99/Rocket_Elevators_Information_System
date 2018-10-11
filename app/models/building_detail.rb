@@ -6,4 +6,5 @@ class BuildingDetail < ApplicationRecord
   def name
     "#{self.information_key}: #{self.value}"
   end
+ 
 end
