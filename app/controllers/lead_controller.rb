@@ -4,6 +4,7 @@ class LeadController < ApplicationController
         
     end
     def new_lead
+        p params
         lead = Lead.new(params["lead"].permit!)
         lead.valid?
         p lead.errors

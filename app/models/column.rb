@@ -1,3 +1,9 @@
 class Column < ApplicationRecord
+  
+  def column_type_enum
+    [['Residential', 0],['Commercial',1],['Corporate',2],['Hybrid',3]]
+  end
+  
+  
   belongs_to :battery
 end

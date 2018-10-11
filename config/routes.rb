@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  # resources :comments
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/residential' =>'home#residential'
   get '/commercial' =>'home#commercial'
