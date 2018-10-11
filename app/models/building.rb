@@ -10,7 +10,7 @@ class Building < ApplicationRecord
     end
   end
   def name
-    "#{self.building_name}"
+    "#{self.administrator_full_name}"
   end
 
 end
