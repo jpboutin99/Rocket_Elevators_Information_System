@@ -6,4 +6,5 @@ class Building < ApplicationRecord
   def name
     "#{self.building_name}"
   end
+
 end
