@@ -4,7 +4,7 @@ class Building < ApplicationRecord
   has_one :battery
   has_many :building_details
   def name
-    "#{self.building_name}"
+    "#{self.administrator_full_name}"
   end
 
 end
