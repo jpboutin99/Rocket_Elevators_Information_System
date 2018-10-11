@@ -8,6 +8,11 @@ gem 'rails', '~> 5.2.1'
 
 # Use mysql2 as the database for Active Record
 gem 'mysql2'
+
+# Use Postregsql as the database for Warehouse
+gem 'pg'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
