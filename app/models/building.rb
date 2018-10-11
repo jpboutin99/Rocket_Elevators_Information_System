@@ -3,6 +3,12 @@ class Building < ApplicationRecord
   belongs_to :address
   has_one :battery
   has_many :building_details
+
+  rails_admin do
+    edit do
+      exclude_fields :building_details
+    end
+  end
   def name
     "#{self.administrator_full_name}"
   end
