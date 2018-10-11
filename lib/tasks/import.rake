@@ -38,5 +38,32 @@ namespace :import do
         building = Building.create!(customer_id: customerID, address_id: address.id, administrator_full_name: row["Adm Name"], administrator_phone: row["Adm Phone"], administrator_email: row["Adm Email"], technician_full_name: row["TechnicianName"], technician_phone: row["TechnicianTelephone"], technician_email: row["TechnicianEmail"], created_at: row["Created At"], updated_at: row["Updated At"])
     end
   end
+
+  task batteries: :environment do 
+    filename = File.join Rails.root, "Batteries.csv"
+    CSV.foreach(filename, headers: true) do |row|
+        buildingID = Building.order("RAND()").first.id
+        EmployeeID = Employee.order("RAND()").first.id
+        battery = Battery.create!(building_id: buildingID, building_type: row["Building Type"], status: row["Status"], employee_id: EmployeeID, in_service_since: row["In Service Since"], last_inspection: row["Last Inspection"], operations_certificate: row["Operation Certificate"], information: row["Information"],notes: row["Notes"], created_at: row["Created At"], updated_at: row["Updated At"])
+    end
+  end
+
+  task columns: :environment do 
+    filename = File.join Rails.root, "Columns.csv"
+
+    CSV.foreach(filename, headers: true) do |row|
+        battery = Battery.order("RAND()").first
+        column = Column.create!(battery_id: battery.id, building_type: battery.building_type, floors_served: row["Floors Served"], status: row["Status"], information: row["Information"],notes: row["Notes"], created_at: row["Created At"], updated_at: row["Updated At"])
+    end
+  end
+
+  task elevators: :environment do 
+    filename = File.join Rails.root, "Elevators.csv"
+
+    CSV.foreach(filename, headers: true) do |row|
+        column = Column.order("RAND()").first
+        elevator = Elevator.create!(column_id: column.id, serial_number: row["Serial Number"], model: row["Model"], building_type: column.building_type, status: row["Status"], in_service_since: row["In Service Since"], last_inspection: row["Last Inspection"], inspection_certificate: row["Inspection Certificate"], information: row["Information"],notes: row["Notes"], created_at: row["Created At"], updated_at: row["Updated At"])
+    end
+  end
 end
 
