@@ -66,6 +66,7 @@ namespace :import do
     end
   end
 
+
   task buildingDetails: :environment do 
     filename = File.join Rails.root, "Building_Details.csv"
 
