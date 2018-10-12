@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/index-Quote.html' => 'quote#quote'
   post '/new_quote' =>'quote#new_quote'
   post '/new_lead' =>'lead#new_lead'
+  get '/chart' =>'home#chart'
+ 
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'home#index'
 

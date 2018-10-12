@@ -8,3 +8,4 @@
 //= require demo.revolution_slider
 //= require owl.carousel
 //= require owl.carousel.min
+//= require Chart
