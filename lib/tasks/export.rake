@@ -33,7 +33,7 @@ namespace :export do
                 end
                 end
             end
-        sql = "INSERT INTO \"dimcustomers\" (created_on, business_name, contact_full_name, contact_email, nb_elevators, customer_city) VALUES ('#{customer.created_at}', '#{customer.business_name}', '#{customer.contact_full_name}', '#{customer.contact_email}', #{nb_elevators}, '#{customer.address.city}')"
+        sql = "INSERT INTO \"dimcustomers\" (id, created_on, business_name, contact_full_name, contact_email, nb_elevators, customer_city) VALUES (nextval('dimcustomers_id_seq'),'#{customer.created_at}', '#{customer.business_name}', '#{customer.contact_full_name}', '#{customer.contact_email}', #{nb_elevators}, '#{customer.address.city}')"
         puts sql
         conn.exec(sql)
     end

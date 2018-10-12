@@ -99,7 +99,8 @@ namespace :import do
     filename = File.join Rails.root, "LeadList.csv"
 
     CSV.foreach(filename, headers: true) do |row|
-        lead = Lead.create!(full_name: row["Full name"], company_name: row["Company name"], email: row["Email"], phone: row["Phone"], created_at: row["Created at"], updated_at: row["Updated at"])
+      puts row
+        lead = Lead.create!(full_name: row["Full name"], company_name: row["Company name"], email: row["Email"], phone: row["Phone"], project_name: row["Project name"], department: row["Department"], created_at: row["Created at"], updated_at: row["Updated at"])
     end
   end
 
@@ -109,6 +110,7 @@ namespace :import do
     filename = File.join Rails.root, "Quotes.csv"
 
     CSV.foreach(filename, headers: true) do |row|
+       puts row
         quote = Quote.create!(quote_type: row["Quote type"], full_name: row["Full name"], business_name: row["Business name"], email: row["Email"], nb_floors: row["Nb floors"], nb_apt: row["Nb apt"], nb_base: row["Nb base"], nb_cies: row["Nb cies"], nb_parking: row["Nb parking"], nb_shaft: row["Nb shaft"], nb_corp: row["Nb corp"], nb_person: row["Nb person"], req_elev: row["Req elev"], option: row["Option"], nb_elev: row["Nb elev"], price_per_elev: row["Price per elev"], elev_total: row["Elev total"], cost_install: row["Cost install"], total: row["Total"], created_at: row["Created at"], updated_at: row["Updated at"])
     end
   end

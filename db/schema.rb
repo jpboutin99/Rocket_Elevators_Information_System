@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_190251) do
     t.binary "file_attachment", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "attachment_file"
     t.index ["customer_id"], name: "index_leads_on_customer_id"
   end
 
