@@ -1,8 +1,14 @@
 class Building < ApplicationRecord
   belongs_to :customer
   belongs_to :address
-  has_one :battery
+  has_many :batteries
   has_many :building_details
+
+  rails_admin do
+    edit do
+      exclude_fields :batteries
+    end
+  end
 
   rails_admin do
     edit do
@@ -10,7 +16,7 @@ class Building < ApplicationRecord
     end
   end
   def name
-    "#{self.administrator_full_name}"
+    "#{self.building_name}"
   end
 
 end
