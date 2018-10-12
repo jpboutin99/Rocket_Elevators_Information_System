@@ -11,6 +11,7 @@ gem 'mysql2'
 
 # Use Postregsql as the database for Warehouse
 gem 'pg'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 
 # Use Puma as the app server

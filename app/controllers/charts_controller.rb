@@ -1,10 +1,6 @@
-class HomeController < ApplicationController
-    
-    def index
-    end
-
+class ChartsController < ApplicationController
+    before_action :authenticate_user!
     def chart
-
         conn = PG::Connection.open( host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", user: "jp", password: "jp123", dbname: "jp")
         @data1 = conn.exec("select concat(extract(year from created_on),'-', extract(month from created_on)) as YearMonth, count(1) as Nbcontact from factcontact group by YearMonth;") 
         @x1 = @data1.column_values(0)
