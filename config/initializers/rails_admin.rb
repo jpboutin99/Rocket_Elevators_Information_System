@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+ 
   config.model 'BuildingDetail' do
     parent Building
   end
