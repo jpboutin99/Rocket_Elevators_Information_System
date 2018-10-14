@@ -2,11 +2,11 @@ class ChartsController < ApplicationController
     before_action :authenticate_user!
     def chart
         conn = PG::Connection.open( host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", user: "jp", password: "jp123", dbname: "jp")
-        @data1 = conn.exec("select concat(extract(year from created_on),'-', extract(month from created_on)) as YearMonth, count(1) as Nbcontact from factcontact group by YearMonth order by YearMonth;") 
+        @data1 = conn.exec("select concat(to_char(to_timestamp (extract(month from created_on)::text, 'MM'), 'TMMonth'), ' ', extract(year from created_on)) as MonthYearStr, count(*) as Nbcontact, concat(extract(year from created_on),' ', to_char(to_timestamp (extract(month from created_on)::text, 'MM'), 'TMMM')) as YearMonthInt from factcontact group by MonthYearStr, YearMonthInt order by YearMonthInt;") 
         @x1 = @data1.column_values(0)
         @y1 = @data1.column_values(1)
 
-        @data2 = conn.exec("select concat(extract(year from created_on),'-', extract(month from created_on)) as YearMonth, count(1) as NbQuotes from factquotes group by YearMonth order by YearMonth;") 
+        @data2 = conn.exec("select concat(to_char(to_timestamp (extract(month from created_on)::text, 'MM'), 'TMMonth'), ' ', extract(year from created_on)) as MonthYearStr, count(*) as NbQuotes, concat(extract(year from created_on),' ', to_char(to_timestamp (extract(month from created_on)::text, 'MM'), 'TMMM')) as YearMonthInt from factquotes group by MonthYearStr, YearMonthInt order by YearMonthInt;") 
         @x2 = @data2.column_values(0)
         @y2 = @data2.column_values(1)
 
