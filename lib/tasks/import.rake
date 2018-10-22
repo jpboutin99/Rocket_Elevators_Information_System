@@ -21,7 +21,7 @@ namespace :import do
     filename = File.join Rails.root, "Addresses.csv"
 
     CSV.foreach(filename, headers: true) do |row|
-        address = Address.create!(address_type: row["Address Type"], status: row["Status"], entity: row["Entity"], street_address: row["StreetAddress"], suite_or_apt: row["Suite or App"], city: row["City"], zip_code: row["ZipCode"], created_at: row["Created At"], updated_at: row["Updated At"], country: row["Country"], notes: row["Notes"])
+        address = Address.create!(address_type: row["Address Type"], status: row["Status"], entity: row["Entity"], street_address: row["StreetAddress"], suite_or_apt: row["Suite or App"], city: row["City"], state: row["State"],zip_code: row["ZipCode"], created_at: row["Created At"], updated_at: row["Updated At"], country: row["Country"], notes: row["Notes"])
     end
   end
 
