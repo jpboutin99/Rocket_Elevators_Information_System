@@ -1,13 +1,24 @@
 RailsAdmin.config do |config|
 
+ 
+  config.model 'BuildingDetail' do
+    parent Building
+  end
+
+  config.model 'Column' do
+    parent Battery
+  end
+  config.model 'Elevator' do
+    parent Column
+  end
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
-
+  config.authenticate_with do
+  warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
+  config.label_methods << :full_name
   ## == Cancan ==
   # config.authorize_with :cancan
 

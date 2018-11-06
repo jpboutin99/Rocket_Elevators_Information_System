@@ -32,9 +32,9 @@
             <ul class="hide">
 
                 <!-- SLIDE  -->
-                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="residential_page1.jpg">
+                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="<%=asset_url("residential_page1.jpg")%>">
 
-                    <%= image_tag("residential_page1.jpg", alt: "home elevator", data: {lazyload: asset_url("residential_page1.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+                    <%= image_tag("1x1.png", alt: "home elevator", data: {lazyload: asset_url("residential_page1.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
 
                     
                     <div class="tp-caption customin ltl tp-resizeme large_bold_white"
@@ -90,10 +90,11 @@
                 </li>
 
                 <!-- SLIDE  -->
-                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="assets/images/residential_page2.jpg">
+                <li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="<%=asset_url("residential_page2.jpg")%>">
 
-                    <img src="assets/images/1x1.png" data-lazyload="assets/images/residential_page2.jpg" alt="old people with home elevator" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
+                    <%= image_tag("1x1.png", alt: "home elevator", data: {lazyload: asset_url("residential_page2.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
 
+                    
                     <div class="tp-caption very_large_text lfb ltt tp-resizeme"
                         data-x="right" data-hoffset="-100"
                         data-y="center" data-voffset="-100"
@@ -145,9 +146,12 @@
                 </li>
 
                 <!-- SLIDE -->
-                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 3" data-thumb="assets/images/residential_page3.jpg">
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 3" data-thumb="<%=asset_url("residential_page3.jpg")%>">
 
-                    <img src="assets/images/1x1.png" data-lazyload="assets/images/residential_page3.jpg" alt="elevator maintenance" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" >
+                   
+                <%= image_tag("1x1.png", alt: "home elevator", data: {lazyload: asset_url("residential_page3.jpg"), bgfit: "cover", bgposition: "center top", bgrepeat: "no-repeat"}) %>
+
+               
 
                     <div class="tp-caption tp-fade fadeout fullscreenvideo"
                         data-x="0"
