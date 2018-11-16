@@ -1,0 +1,7 @@
+
+console.log(" Hello");
+$("#building_select").empty()
+
+$("#building_select").append('<%= escape_javascript(render(:partial => @buildings)) %>');
+console.log("let's Go!")
+

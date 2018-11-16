@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: gilles
-  password: codeboxx
-  host: localhost
+  username: codeboxx
+  password: Codeboxx1!
+  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
 
 development:
   <<: *default
-  database: myapp_development
+  database: gillesat
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
+  database: gillesat
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>

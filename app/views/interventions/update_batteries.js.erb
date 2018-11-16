@@ -1,0 +1,6 @@
+
+console.log(" Hello");
+$("#battery_select").empty()
+
+$("#battery_select").append('<%= escape_javascript(render(:partial => @batteries)) %>');
+console.log("let's Go!")

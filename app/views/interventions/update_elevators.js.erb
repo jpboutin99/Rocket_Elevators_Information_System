@@ -1,0 +1,6 @@
+
+console.log(" Hello");
+$("#elevator_select").empty()
+
+$("#elevator_select").append('<%= escape_javascript(render(:partial => @elevators)) %>');
+console.log("let's Go!")

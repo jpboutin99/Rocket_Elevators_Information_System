@@ -1,0 +1,6 @@
+
+console.log(" Hello");
+$("#column_select").empty()
+
+$("#column_select").append('<%= escape_javascript(render(:partial => @columns)) %>');
+console.log("let's Go!")
